@@ -1,37 +1,37 @@
 {
-  "name": "vue3-admin",
-  "private": true,
-  "version": "0.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview",
-    "lint:eslint": "eslint src --fix --ext .ts,.tsx,.vue,.js,.jsx",
-    "lint:prettier": "prettier --write .",
-    "prepare": "husky install",
-    "lint:lint-staged": "lint-staged",
-    "commit": "git pull && git add -A && git-cz && git push"
-  },
-  "dependencies": {
-    "vue": "^3.2.37"
-  },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.36.1",
-    "@typescript-eslint/parser": "^5.36.1",
-    "@vitejs/plugin-vue": "^3.0.3",
-    "eslint": "^8.23.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-vue": "^9.4.0",
-    "husky": "^8.0.0",
-    "lint-staged": "^13.0.3",
-    "mrm": "^4.1.0",
-    "prettier": "^2.7.1",
-    "typescript": "^4.6.4",
-    "vite": "^3.0.7",
-    "vue-tsc": "^0.39.5"
-  },
-  "lint-staged": {
-    "*.js": "eslint --cache --fix"
-  }
+	"name": "vue3-admin",
+	"private": true,
+	"version": "0.0.0",
+	"scripts": {
+		"dev": "vite",
+		"build": "vue-tsc --noEmit && vite build",
+		"preview": "vite preview",
+		"lint:eslint": "eslint --fix --ext .js,.ts,.vue ./src",
+		"lint:prettier": "prettier --write --loglevel warn \"src/**/*.{js,ts,json,tsx,css,less,scss,vue,html,md}\"",
+		"lint:stylelint": "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
+		"prepare": "husky install",
+		"lint:lint-staged": "lint-staged"
+	},
+	"dependencies": {
+		"vue": "^3.2.37"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.36.1",
+		"@typescript-eslint/parser": "^5.36.1",
+		"@vitejs/plugin-vue": "^3.0.3",
+		"eslint": "^8.23.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-vue": "^9.4.0",
+		"husky": "^8.0.0",
+		"lint-staged": "^13.0.3",
+		"mrm": "^4.1.0",
+		"prettier": "^2.7.1",
+		"typescript": "^4.6.4",
+		"vite": "^3.0.7",
+		"vue-tsc": "^0.39.5"
+	},
+	"lint-staged": {
+		"*.js": "eslint --cache --fix"
+	}
 }
