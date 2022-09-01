@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const count = 0;
+let count = 0;
 
 console.log(count);
 // This starter template is using Vue 3 <script setup> SFCs
@@ -7,7 +7,7 @@ console.log(count);
 </script>
 
 <template>
-	<div>app</div>
+  <div>app</div>
 </template>
 
 <style scoped></style>
